@@ -1,0 +1,119 @@
+.mou-header {
+  background: $blue;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mou-header img {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+}
+
+.mou-header a {
+  color: $t-white;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.header-main > .container {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header-main {
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.header-main-menu {
+  padding-right: 50px;
+}
+
+.header-main-menu > ul {
+  margin: 0;
+}
+
+.header-main-menu > ul > li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.header-main-menu > ul > li:first-child {
+  margin-left: 0px;
+}
+
+.header-main-menu a {
+  color: $t-dark-gray;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.header-main-menu ul li > div {
+  display: none;
+  padding-top: 45px;
+  position: absolute;
+  z-index: 1100;
+}
+
+.header-main-menu ul ul {
+  display: block;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px 30px;
+}
+.header-main-menu ul ul li {
+  display: block;
+}
+
+.header-main-menu ul ul li a {
+  display: block;
+  margin: 25px 0px;
+}
+
+.btn-m {
+  border: none;
+  position: relative;
+  display: inline-block;
+  background: #ed6c71;
+  padding: 0px 27px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0px 12px;
+}
+
+.btn-o,
+.btn-m {
+  white-space: nowrap;
+}
+.btn-m:hover {
+  opacity: 0.8;
+}
+.btn-m.btn-50 {
+  height: 50px;
+  line-height: 50px;
+  border-radius: 0px 11px 0px 11px;
+  clip-path: polygon(11px 0, 100% 0, 100% 40px, 97px 100%, 0 100%, 0 11px);
+}
+
+@media screen and (min-width: 767px) {
+  .mobile-main-menu {
+    display: none !important;
+  }
+}
