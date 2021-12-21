@@ -71,6 +71,10 @@
   &__slider {
     padding: 40px 55px;
 
+    @media screen and (max-width: $lg) {
+      padding: 20px 0;
+    }
+
     &_item {
       width: 167px !important;
       min-height: 226px;
@@ -101,6 +105,7 @@
         color: $blue;
         margin-bottom: 5px;
         padding: 0 20px;
+        min-height: 40px;
       }
       .curl {
         font-weight: 500;

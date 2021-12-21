@@ -9,20 +9,18 @@ $(document).ready(function () {
       breakpoint: 1359,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1
       }
     },
     {
       breakpoint: 991,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
         arrows: false,
         centerMode: true,
         variableWidth: true,
+        swipeToSlide: true,
       }
     }
-
     ]
   });
 
@@ -33,20 +31,45 @@ $(document).ready(function () {
     slidesToShow: 7,
     slidesToScroll: 1,
     responsive: [{
-      breakpoint: 1280,
+      breakpoint: 1599,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 4,
       }
     },
     {
       breakpoint: 991,
       settings: {
+        slidesToShow: 3,
+        centerMode: true,
+        arrows: false,
+        swipeToSlide: true,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        arrows: false,
+        centerMode: true,
+        swipeToSlide: true,
+      }
+    },
+    {
+      breakpoint: 575,
+      settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        arrows: false,
+        centerMode: true,
+        variableWidth: true,
+        swipeToSlide: true,
       }
     }
-
     ]
   });
 
@@ -59,8 +82,8 @@ $(document).ready(function () {
     e.preventDefault();
     $(".mou-header-fade").fadeToggle();
   });
-$('.header-close').click((e) => {
-  e.preventDefault()
-  $('.mou-header-fade').fadeOut()
-});
+  $('.header-close').click((e) => {
+    e.preventDefault()
+    $('.mou-header-fade').fadeOut()
+  });
 });
