@@ -9,15 +9,16 @@
   }
 }
 
-@import "fonts";
-@import "v";
-@import "header";
-
 *,
 body,
 html {
   font-family: "Montserrat";
   outline: none !important;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
 }
 
 a,
@@ -49,23 +50,27 @@ a:hover {
   font-size: 0.875rem;
 }
 
-
 @media screen and (min-width: 1360px) {
   .container {
-      max-width: 1300px;
+    max-width: 1300px;
   }
 }
 
-
-
 @media screen and (min-width: 1599px) {
   .container {
-      max-width: 1500px;
+    max-width: 1500px;
   }
 }
 
 @media screen and (min-width: 1699px) {
   .container {
-      max-width: 1600px;
+    max-width: 1600px;
   }
 }
+
+
+@import "fonts";
+@import "v";
+@import "header";
+@import "slider";
+@import "content";
