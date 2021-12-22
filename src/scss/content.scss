@@ -338,6 +338,7 @@
         color: $t-dark-gray;
         margin: 20px 30px 68px 30px;
         min-height: 52px;
+        display: block;
 
         @media screen and (max-width: $xl) {
           margin: 10px 0 86px;
