@@ -1,0 +1,25 @@
+.breadcrumbs {
+  font-size: 14px;
+  color: $blue;
+  font-weight: 500;
+  background-color: #dadded;
+  padding: 40px 0;
+  & .container > div {
+    display: inline;
+  }
+
+  & a {
+    color: #7e8190;
+    font-weight: 400;
+
+    &:hover {
+      color: #aaa;
+    }
+  }
+
+  & span.sep {
+    margin: 0px 3px;
+    color: #7e8190;
+    font-weight: 200;
+  }
+}
