@@ -2,12 +2,18 @@
   &__top {
     background-color: #f4f5fb;
 
+    @media screen and (max-width: $lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     &_wrapper {
       position: relative;
       padding: 40px 55px;
 
       @media screen and (max-width: $lg) {
         padding: 20px 0;
+        max-width: 100vw;
       }
 
       .slick-slide {
@@ -79,6 +85,8 @@
 
     @media screen and (max-width: $lg) {
       padding: 20px 0;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
     }
 
     &_item {
