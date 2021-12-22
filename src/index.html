@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Маркет ЮГРА</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./vendor/select2/select2.min.css">
   <link rel="stylesheet" href="./vendor/fonts/font-awesome.min.css">
   <link rel="stylesheet" href="./vendor/slick/slick.css">
   <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
@@ -53,36 +54,66 @@
       </div>
     </section>
 
-    <!-- <section class="content container">
-      <div class="row g-0 justify-content-between border-bottom">
-        <h2 class="col-3 content__title g-0">Витрина подарков</h2>
-        <nav class="d-flex col-6 g-0 justify-content-end content__nav">
-          <div class="search">Поиск</div>
-          <div class="bascket">Корзина</div>
-          <div class="city">Выбор города</div>
-          <div class="answer">Ответы на вопросы</div>
+    <section class="content container">
+      <div class="row g-0 justify-content-between flex-column flex-lg-row">
+        <h2 class="col-12 col-lg-4 content__title g-0">Витрина подарков</h2>
+        <nav class="d-flex сol-12 col-lg-8 g-0 justify-content-between justify-content-lg-end content__nav ">
+          <div class="search">
+            <span class="d-none d-lg-block">Поиск</span>
+          </div>
+          <div class="bascket">
+            <span class="d-none d-lg-block">Корзина</span>
+          </div>
+          <div class="city">
+            <!-- <span class="d-none d-lg-block">Выбор города</span> -->
+            <select name="city" id="sortCity">
+              <option></option>
+              <option value="sc1">Москва</option>
+              <option value="sc1">Клин</option>
+              <option value="sc1">Санкт-Петербург</option>
+            </select>
+          </div>
+          <div class="answer">
+            <span class="d-none d-lg-block">Ответы на вопросы</span>
+          </div>
         </nav>
       </div>
 
-      <div class="row g-0 justify-content-between align-items-center content__filter">
-        <select class="form-select w-auto" aria-label="Тип сортировки">
-          <option selected>По популярности</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <a href="#" class="w-auto active" id="all-categories">Все категории</a>
-        <a href="#" class="w-auto">Сувениры</a>
-        <a href="#" class="w-auto">Мероприятия</a>
-        <a href="#" class="w-auto">Электронный контент</a>
-        <a href="#" class="w-auto">Услуги</a>
-        <a href="#" class="w-auto">Благотворительность</a>
-        <a href="#" class="w-auto">Новинки</a>
-        <a href="#" class="w-auto">Акции</a>
+      <div class="d-flex flex-column-reverse flex-md-row g-0 j justify-content-between align-items-center content__filter">
+        <div class="filter_sort">
+          <select class="form-select w-auto" id="sortSelect">
+            <option selected="selected">По популярности</option>
+            <option value="s1">По цене</option>
+            <option value="s2">По скидке</option>
+            <option value="s3">По рейтингу</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center filter_category">
+          <div class="icon_select_category"></div>
+          <select class="form-select" id="sortCategories">
+            <option value="c0" selected="selected">Все категории</option>
+            <option value="c1">Сувениры</option>
+            <option value="c2">Мероприятия</option>
+            <option value="c3">Электронный контент</option>
+            <option value="c4">Услуги</option>
+            <option value="c5">Благотворительность</option>
+            <option value="c6">Новинки</option>
+            <option value="c7">Акции</option>
+          </select>
+          <div class="d-none d-lg-flex flex-wrap">
+            <a href="#" class="w-auto">Сувениры</a>
+            <a href="#" class="w-auto">Мероприятия</a>
+            <a href="#" class="w-auto">Электронный контент</a>
+            <a href="#" class="w-auto">Услуги</a>
+            <a href="#" class="w-auto">Благотворительность</a>
+            <a href="#" class="w-auto">Новинки</a>
+            <a href="#" class="w-auto">Акции</a>
+          </div>
+        </div>
       </div>
 
       <div class="row cards-wrapper">
-        <div class="col-4">
+        <div class="col-6 col-lg-4">
           <div class="card">
             <img src="./img/cards/c1.jpg" class="card-img-top" alt="фото товара">
             <div class="card-category card-category_new">Новинка</div>
@@ -90,13 +121,14 @@
               <h5 class="card-title">Кружка белая, с надписью «Сегодня твой день!»</h5>
               <a href="#" class="like">1243</a>
               <a href="#" class="btn">
+                <span class="price_to_hover"><s>600</s> 500 баллов</span>
                 <span class="prace">500 баллов</span>
                 <span class="basket">В корзину</span>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-lg-4">
           <div class="card">
             <img src="./img/cards/c2.jpg" class="card-img-top" alt="фото товара">
             <div class="card-category card-category_promotion">Акция</div>
@@ -104,13 +136,14 @@
               <h5 class="card-title">Дождевик красный</h5>
               <a href="#" class="like">3243</a>
               <a href="#" class="btn">
+                <span class="price_to_hover"><s>600</s> 500 баллов</span>
                 <span class="prace">9300 баллов</span>
                 <span class="basket">В корзину</span>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-lg-4">
           <div class="card">
             <img src="./img/cards/c3.jpg" class="card-img-top" alt="фото товара">
             <div class="card-category card-category_hit">Хит продаж</div>
@@ -118,45 +151,49 @@
               <h5 class="card-title">Термос</h5>
               <a href="#" class="like">755</a>
               <a href="#" class="btn">
+                <span class="price_to_hover"><s>600</s> 500 баллов</span>
                 <span class="prace">1222 баллов</span>
                 <span class="basket">В корзину</span>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-lg-4">
           <div class="card">
             <img src="./img/cards/c4.jpg" class="card-img-top" alt="фото товара">
             <div class="card-body">
               <h5 class="card-title">Ручка шариковая, синяя</h5>
               <a href="#" class="like">3243</a>
               <a href="#" class="btn">
+                <span class="price_to_hover"><s>600</s> 500 баллов</span>
                 <span class="prace">500 баллов</span>
                 <span class="basket">В корзину</span>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-lg-4">
           <div class="card">
             <img src="./img/cards/c5.jpg" class="card-img-top" alt="фото товара">
             <div class="card-body">
               <h5 class="card-title">Наушники беспроводные</h5>
               <a href="#" class="like">755</a>
               <a href="#" class="btn">
+                <span class="price_to_hover"><s>600</s> 500 баллов</span>
                 <span class="prace">785 баллов</span>
                 <span class="basket">В корзину</span>
               </a>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-6 col-lg-4">
           <div class="card">
             <img src="./img/cards/c6.jpg" class="card-img-top" alt="фото товара">
             <div class="card-body">
               <h5 class="card-title">Блокнот</h5>
               <a href="#" class="like">1243</a>
               <a href="#" class="btn">
+                <span class="price_to_hover"><s>600</s> 500 баллов</span>
                 <span class="prace">1222 баллов</span>
                 <span class="basket">В корзину</span>
               </a>
@@ -169,11 +206,11 @@
       <a href="#" class="show_more w-100">
         Показать еще
       </a>
-    </section> -->
+    </section>
 
     <section class="container-fluid raiting">
       <div class="container">
-        <h2 class="raiting__title g-0 border-bottom">Витрина подарков</h2>
+        <h2 class="raiting__title g-0 border-bottom">Рейтинг пользователей</h2>
         <div class="raiting__slider">
 
           <div class="raiting__slider_item">
@@ -253,6 +290,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="./vendor/select2/select2.min.js"></script>
   <script src="./vendor/slick/slick.js"></script>
   <script src="./js/script.js"></script>
 </body>

@@ -86,4 +86,23 @@ $(document).ready(function () {
     e.preventDefault()
     $('.mou-header-fade').fadeOut()
   });
-});
+
+  // Селекты
+  $('#sortSelect').select2({
+    minimumResultsForSearch: -1,
+    width: '300px',
+  });
+
+  $('#sortCategories').select2({
+    minimumResultsForSearch: -1,
+    width: '210px',
+    dropdownCssClass: 'dropdow-categories'
+  });
+
+  $('#sortCity').select2({
+    minimumResultsForSearch: -1,
+    width: '188px',
+    placeholder: "Выбор города",
+    dropdownCssClass: 'dropdow-city'
+  });
+})
