@@ -38,6 +38,28 @@
         padding: 0 5px;
       }
 
+      a {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 15px;
+          right: 15px;
+          bottom: 0;
+          display: block;
+          background: linear-gradient(
+            123.61deg,
+            rgba(114, 72, 37, 0.78) 31.37%,
+            rgba(114, 72, 37, 0) 78.01%
+          );
+
+          @media screen and (max-width: $lg) {
+            left: 5px;
+            right: 5px;
+          }
+        }
+      }
+
       img {
         object-fit: cover;
         object-position: center;
@@ -56,6 +78,7 @@
         color: $t-white;
         font-size: 20px;
         font-weight: 600;
+        z-index: 1;
 
         @media screen and (max-width: $sm) {
           top: 20px;
@@ -67,14 +90,9 @@
   }
 }
 
-.raiting {
+.rating {
   background-color: #f4f5fb;
   padding-top: 50px;
-  visibility: hidden;
-
-  .slick-initialized {
-    visibility: visible;
-  }
 
   &__title {
     font-weight: bold;
@@ -92,11 +110,16 @@
 
   &__slider {
     padding: 40px 55px;
+    visibility: hidden;
 
     @media screen and (max-width: $lg) {
       padding: 20px 0;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
+    }
+
+    &.slick-initialized {
+      visibility: visible;
     }
 
     &_item {
@@ -107,6 +130,7 @@
       line-height: 20px;
       margin-left: 10px;
       margin-right: 10px;
+      position: relative;
 
       img {
         width: 167px;
