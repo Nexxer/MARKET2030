@@ -101,6 +101,25 @@ $(document).ready(function () {
         centerMode: true,
       }
     },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 3,
+        vertical: false,
+        centerMode: false,
+        prevArrow: "<div class='slider-prev'></div>",
+        nextArrow: "<div class='slider-next'></div>",
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        vertical: false,
+        centerMode: true,
+        arrows: false,
+      }
+    },
     ]
   });
 
@@ -119,6 +138,36 @@ $(document).ready(function () {
         centerMode: true,
         variableWidth: true,
         swipeToSlide: true,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 4,
+        vertical: false,
+        centerMode: true,
+        arrows: false,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 3,
+        vertical: false,
+        centerMode: true,
+        arrows: false,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 420,
+      settings: {
+        slidesToShow: 2,
+        vertical: false,
+        centerMode: true,
+        arrows: false,
+        infinite: true,
       }
     },
       // {

@@ -36,8 +36,19 @@
 
     <div class="content container">
       <div class="row">
-        <div class="slider_nav col-lg-2">
-          <div class="slider_nav_wrapper">
+        <div class="sliders_wrapper col-lg-7">
+          <div class="slider_nav">
+            <div class="slider_nav_wrapper">
+              <img src="./img/cards/d1.jpg" alt="фото товара">
+              <img src="./img/cards/d2.jpg" alt="фото товара">
+              <img src="./img/cards/d3.jpg" alt="фото товара">
+              <img src="./img/cards/d4.jpg" alt="фото товара">
+              <img src="./img/cards/d5.jpg" alt="фото товара">
+              <img src="./img/cards/d6.jpg" alt="фото товара">
+            </div>
+          </div>
+
+          <div class="slider_detail">
             <img src="./img/cards/d1.jpg" alt="фото товара">
             <img src="./img/cards/d2.jpg" alt="фото товара">
             <img src="./img/cards/d3.jpg" alt="фото товара">
@@ -46,23 +57,13 @@
             <img src="./img/cards/d6.jpg" alt="фото товара">
           </div>
         </div>
-
-        <div class="slider_detail col-lg-5">
-          <img src="./img/cards/d1.jpg" alt="фото товара">
-          <img src="./img/cards/d2.jpg" alt="фото товара">
-          <img src="./img/cards/d3.jpg" alt="фото товара">
-          <img src="./img/cards/d4.jpg" alt="фото товара">
-          <img src="./img/cards/d5.jpg" alt="фото товара">
-          <img src="./img/cards/d6.jpg" alt="фото товара">
-        </div>
-
         <div class="col-lg-5 detail_choice d-flex flex-column">
           <h2>Кружка белая, с надписью «Сегодня твой день!»</h2>
           <ul class="categories list-unstyled d-flex flex-wrap">
             <li><a href="#">Сувениры</a></li>
           </ul>
 
-          <div class="d-flex justify-content-between align-items-end">
+          <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
             <span class="price">537 баллов</span>
             <p class="order">Товар доступен для заказа, в наличие 19 штук</p>
           </div>
@@ -117,7 +118,7 @@
         <div class="about_text col-lg-7">
           <p> Кружка – лучший друг человека, или подарок на все времена! У нас всегда есть в наличии классические кружки объемом 330 мл. Мы выполняем полноцветное нанесение методом сублимации. От вас нужны только пожелания по изображению и надписям. Специалисты компании охотно посоветуют наиболее удачное сочетание цветов, подскажут, как лучше расположить логотип, ответят на все возникшие вопросы.
             Принцип восприятия многопланово концентрирует тактический инвестиционный продукт, оптимизируя бюджеты. Презентационный материал, конечно, довольно хорошо сбалансирован. Как предсказывают футурологи начальная стадия проведения исследования подсознательно консолидирует социометрический охват аудитории, полагаясь на инсайдерскую информацию. Можно предположить, что презентационный материал спорадически обуславливает межличностный инструмент маркетинга. Повышение жизненных стандартов, вопреки мнению П.Друкера, искажает продвигаемый имидж предприятия, опираясь на опыт западных коллег.</p>
-          <div class="rating_wrapper d-block d-lg-none">
+          <div class="rating_wrapper d-flex flex-column align-items-center d-lg-none">
             <div class="count">
               <p class="raiting">4.7</p>
               <span>На основании 240 отзывов пользователей</ызфт>
@@ -203,40 +204,51 @@
             </div>
 
             <ul class="customer_reviews_list list-unstyled">
-              <li class="customer_reviews_item d-flex">
-                <img src="./img/cards/u1.png" alt="фото">
-                <div class="data">
-                  <span class="name">Алина</span>
-                  <span class="time">Вчера, в 19:57 </span>
-                  <div class="stars">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
+
+              <li class="customer_reviews_item d-flex flex-column">
+                <div class="head d-flex">
+                  <img src="./img/cards/u1.png" alt="фото">
+                  <div>
+                    <span class="name">Алина</span>
+                    <span class="time">Вчера, в 19:57 </span>
+                    <div class="stars">
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span></span>
+                    </div>
                   </div>
+                </div>
+                <div class="data">
                   <p class="text">Нашел этот салон случайно, проходил мимо, зашел постричься. Стал ходить постоянно. У меня два мастера Ирина и Елена. Мне всё нравится, они вежливые, профессиональные. Что прошу, то и делают, прямо хорошо понимают. В салоне уютно.</p>
                   <a href="#">Пожаловться на отзыв</a>
                   <a href="#">Ответить</a>
                 </div>
               </li>
-              <li class="customer_reviews_item d-flex">
-                <img src="./img/slider/r0.png" alt="фото" class="standart_avatar">
-                <div class="data">
-                  <span class="name">Алексей Сергеев</span>
-                  <span class="time">Вчера, в 19:57 </span>
-                  <div class="stars">
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
+
+              <li class="customer_reviews_item d-flex flex-column">
+                <div class="head d-flex">
+                  <img src="./img/slider/r0.png" alt="фото" class="standart_avatar">
+                  <div>
+                    <span class="name">Алексей Сергеев</span>
+                    <span class="time">Вчера, в 19:57 </span>
+                    <div class="stars">
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span class="active"></span>
+                      <span></span>
+                      <span></span>
+                    </div>
                   </div>
+                </div>
+                <div class="data">
                   <p class="text">Раз в месяц точно посещаю салон, а то и чаще, в последний раз была на коррекции и покраске бровей. По времени процедура заняла час, окрашивание было хной, результат меня устроил. На процедуре чувствовала себя очень хорошо, я всегда в салоне Май себя отлично чувствую. Мастер Татьяна мне ранее маникюр делала, она очень обаятельная, приветливая, отзывчивая и на самом деле высокий профессионал во всём, в данном случае я была удивлена, когда мне в салоне предложили специалиста Татьяну, но она справилась очень хорошо, вопросов нет. У специалиста отдельный кабинет, в нем делают коррекцию бровей, рабочее место чистое, нареканий не вызвало.</p>
                   <a href="#">Пожаловться на отзыв</a>
                   <a href="#">Ответить</a>
                 </div>
               </li>
+
             </ul>
           </div>
         </div>
