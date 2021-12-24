@@ -170,40 +170,6 @@ $(document).ready(function () {
         infinite: true,
       }
     },
-      // {
-      //   breakpoint: 1199,
-      //   settings: {
-      //     slidesToShow: 4,
-      //   }
-      // },
-      // {
-      //   breakpoint: 991,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     centerMode: true,
-      //     arrows: false,
-      //     swipeToSlide: true,
-      //   }
-      // },
-      // {
-      //   breakpoint: 767,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     arrows: false,
-      //     centerMode: true,
-      //     swipeToSlide: true,
-      //   }
-      // },
-      // {
-      //   breakpoint: 575,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     arrows: false,
-      //     centerMode: true,
-      //     variableWidth: true,
-      //     swipeToSlide: true,
-      //   }
-      // }
     ]
   });
 
@@ -240,4 +206,42 @@ $(document).ready(function () {
     placeholder: "Выбор города",
     dropdownCssClass: 'dropdow-city'
   });
+
+  // Читать далее
+  var text = $('.read_more p');
+  var btnShow = $('.read_more a');
+
+  function showText() {
+      if (text.height() > 300) {
+          text.addClass('info__text_big');
+          btnShow.show();
+      } else {
+          text.removeClass('info__text_big');
+          btnShow.hide();
+      }
+  }
+
+  showText()
+
+  $(window).resize(function () {
+      text.css('height', 'auto');
+      showText();
+  });
+
+  btnShow.click(function () {
+      if (btnShow.html() != "Свернуть") {
+          text.animate({ height: text.get(0).scrollHeight }, 300);
+          text.css("-webkit-line-clamp", "unset");
+          text.removeClass('info__text_big');
+          btnShow.html("Свернуть");
+          return false;
+      } else {
+          var curHeight = text.height();
+          text.height(curHeight).animate({ height: 286 }, 300, function () { text.css("-webkit-line-clamp", "11"); });
+          text.css("height", "auto");
+          text.addClass('info__text_big');
+          btnShow.html("Читать полностью");
+          return false;
+      }
+  })
 })
