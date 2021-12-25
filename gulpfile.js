@@ -217,6 +217,7 @@ function watchFile() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.vendor], vendor);
 }
 function clean() {
     return del(path.clean);

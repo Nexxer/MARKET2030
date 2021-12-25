@@ -208,40 +208,26 @@ $(document).ready(function () {
   });
 
   // Читать далее
-  var text = $('.read_more p');
-  var btnShow = $('.read_more a');
+  const text = $('.read_more');
+  const hText = text.height();
+  text.readmore({
+    collapsedHeight: 275,
+    moreLink: '<a href="#">Читать далее</a>',
+    lessLink: '<a href="#">Свернуть</a>',
+    heightMargin: 75,
+    beforeToggle: function (trigger, element, expanded) {
+      element.toggleClass('clamp');
 
-  function showText() {
-      if (text.height() > 300) {
-          text.addClass('info__text_big');
-          btnShow.show();
-      } else {
-          text.removeClass('info__text_big');
-          btnShow.hide();
+      if (expanded) {
+        $('html, body').animate({ scrollTop: element.offset().top - 10 }, { duration: 0 });
       }
-  }
-
-  showText()
-
-  $(window).resize(function () {
-      text.css('height', 'auto');
-      showText();
+    },
   });
 
-  btnShow.click(function () {
-      if (btnShow.html() != "Свернуть") {
-          text.animate({ height: text.get(0).scrollHeight }, 300);
-          text.css("-webkit-line-clamp", "unset");
-          text.removeClass('info__text_big');
-          btnShow.html("Свернуть");
-          return false;
-      } else {
-          var curHeight = text.height();
-          text.height(curHeight).animate({ height: 286 }, 300, function () { text.css("-webkit-line-clamp", "11"); });
-          text.css("height", "auto");
-          text.addClass('info__text_big');
-          btnShow.html("Читать полностью");
-          return false;
-      }
-  })
+  setTimeout(() => {
+    if (hText >= 350) {
+      text.addClass('clamp');
+    }
+  }, 0);
 })
+
