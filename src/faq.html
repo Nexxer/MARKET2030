@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ответы на вопросы</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./vendor/select2/select2.min.css">
+  <link rel="stylesheet" href="./vendor/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="./vendor/slick/slick.css">
+  <link rel="stylesheet" href="./vendor/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  @@include("_header.html")
+
+  <style>
+    .accordion {
+      box-shadow: 0px 5px 15px rgb(0 0 0 / 7%);
+      background-color: transparent;
+      border-radius: 15px 0;
+    }
+
+    .accordion-item {
+      background-color: transparent;
+    }
+
+    .accordion-item:first-of-type .accordion-button {
+      border-top-left-radius: 15px;
+    }
+
+    .accordion-item:last-of-type {
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
+
+    .accordion-item:last-of-type .accordion-button.collapsed {
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
+
+    .accordion-button {
+      background-color: #27348B;
+      color: #fff;
+    }
+
+    .accordion-button::after {
+      display: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: #fff;
+      background-color: #27348B;
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+    }
+
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+    }
+  </style>
+  <main>
+    
+    <div class="breadcrumbs container-fluid">
+      <div class="container">
+        <div>
+          <a href="/" title="Главная" itemprop="item">
+            <span itemprop="name">Главная</span>
+          </a>
+        </div>
+        <div class="bx-breadcrumb-item">
+          <span class="sep">/</span>
+          <span>Ответы на вопросы</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <div class="accordion accordion-flush mt-5" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                  Как оформить заказ?
+                </button>
+              </h2>
+              <div id="q1" class="accordion-collapse collapse" aria-labelledby="hq1" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Для оформления заказа в «Магазине подарков» вам необходимо заполнить поля «ФИО», «Адрес электронной почты», «Адрес доставки», после чего перейти в корзину и оформить заказ.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                  Как отменить заказ?
+                </button>
+              </h2>
+              <div id="q2" class="accordion-collapse collapse" aria-labelledby="hq2" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  В течение двух недель с момента оформления заказа из категории «Сувениры» вы можете самостоятельно отменить заказ. Достаточно выбрать необходимую позицию в списке оформленных заказов и нажать кнопку «Отменить заказ». Бонусные баллы, заблокированные при бронировании данного поощрения, будут возвращены на ваш счет в течение суток.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                  Вернутся ли мне баллы за отмененный/аннулированный заказ?
+                </button>
+              </h2>
+              <div id="q3" class="accordion-collapse collapse" aria-labelledby="hq3" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Если вы отменили заказ на сувенирную продукцию самостоятельно в течение двух недель с момента оформления, баллы вернутся на ваш счет в течение суток. ВНИМАНИЕ! Баллы, потраченные на подарки, не относящиеся к категории «Сувениры», возврату не подлежат!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="true" aria-controls="q4">
+                  Что делать, если баллы не вернулись?
+                </button>
+              </h2>
+              <div id="q4" class="accordion-collapse collapse" aria-labelledby="hq4" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Если баллы не вернулись вам в течение недели, пожалуйста, обратитесь в службу техподдержки проекта. Максимально подробно опишите свою проблему и обязательно укажите ФИО, логин от личного кабинета.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                  Как получить подарок?
+                </button>
+              </h2>
+              <div id="q5" class="accordion-collapse collapse" aria-labelledby="hq5" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Подарки, которые складируются не в городе проживания пользователя, оформляющего заказ, направляются Почтой России. Трек-номер отправления направляется по электронной почте, указанной в личном кабинете пользователя.
+                  При выборе подарка с геопривязкой к городу, в котором проживает пользователь, оформляющий заказ, информация о месте и времени получения заказа направляется по электронной почте, указанной в личном кабинете пользователя.
+                  ВАЖНО! Указывайте корректные контактные данные: адрес электронной почты, адрес доставки и ФИО.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                  Могу ли я обменять сувенир, если он оказался с браком?
+                </button>
+              </h2>
+              <div id="q6" class="accordion-collapse collapse" aria-labelledby="hq6" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Мы готовы обменять сувенир, если он оказался с браком. Для этого нужно направить описание и фото проблемы в техподдержку. При положительном результате рассмотрения претензии вам будет направлена замена.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q7" aria-expanded="false" aria-controls="q7">
+                  Как вовремя узнавать о появлении новых активностей?
+                </button>
+              </h2>
+              <div id="q7" class="accordion-collapse collapse" aria-labelledby="hq7" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Подписаться на рассылку уведомлений в личном кабинете пользователя. При включении оповещения по e-mail уведомления будут поступать на адрес электронной почты, указанный в профиле.
+                  Все активные проекты также отображаются в личном кабинете пользователя.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hq8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q8" aria-expanded="false" aria-controls="q8">
+                  Как связаться с представителями проекта?
+                </button>
+              </h2>
+              <div id="q8" class="accordion-collapse collapse" aria-labelledby="hq8" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  По всем возникающим вопросам вы можете обращаться в «Обратную связь», а также по адресу электронной почты plesovskihkd@or86.ru и по телефону 8347360037 (доб. 713). Пожалуйста, включите в свое обращение всю имеющуюся у вас информацию. Чем больше мы будем знать подробностей, тем быстрее наши специалисты подготовят для вас ответ.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/.col-->
+
+      </div>
+    </div>
+  </main>
+  @@include("_footer.html")
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

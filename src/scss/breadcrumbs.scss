@@ -1,6 +1,6 @@
 .breadcrumbs {
   font-size: 14px;
-  color: $blue;
+  color: #7e8190;
   font-weight: 500;
   background-color: #dadded;
   padding: 40px 0;
@@ -9,17 +9,20 @@
   }
 
   & a {
-    color: #7e8190;
+    // color: #7e8190;
+    color: #27348B;
+
     font-weight: 400;
 
     &:hover {
-      color: #aaa;
+      opacity: 0.8;
     }
   }
 
   & span.sep {
     margin: 0px 3px;
     color: #7e8190;
+
     font-weight: 200;
   }
 }

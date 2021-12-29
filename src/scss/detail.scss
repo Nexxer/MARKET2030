@@ -114,7 +114,7 @@
   }
 }
 
-.slider_detail {
+.slider_detailed {
   max-height: 633px;
   height: 100%;
   display: inline-block;
@@ -150,7 +150,7 @@
   }
 }
 
-.detail_choice {
+.detailed_choice {
   @media screen and (max-width: $lg) {
     margin-top: 30px;
     order: 1;
@@ -430,7 +430,7 @@
         line-height: 29px;
       }
     }
-    &_detail {
+    &_detailed {
       margin-bottom: 50px;
 
       @media screen and (max-width: $md) {
@@ -676,7 +676,7 @@
       max-width: 100%;
     }
 
-    .raiting {
+    .rating {
       font-weight: 600;
       font-size: 60px;
       line-height: 73px;

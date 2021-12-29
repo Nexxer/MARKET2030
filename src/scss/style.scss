@@ -74,5 +74,12 @@ a:hover {
 @import "header";
 @import "slider";
 @import "content";
-@import "index2";
+@import "detail";
+@import "rating";
 @import "footer";
+
+.select2-container--default
+.select2-results__option--highlighted.select2-results__option--selectable {
+background-color: $blue;
+color: white;
+}

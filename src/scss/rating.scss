@@ -1,0 +1,249 @@
+.page__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  color: $t-dark-gray;
+  margin-bottom: 40px;
+}
+
+.rating-page {
+  .select2-container{
+    @media screen and (max-width: $sm){
+      width: 280px!important;
+    }
+  }
+  .select2-selection__rendered {
+    height: 100%;
+    padding-left: 19px !important;
+    padding-right: 20px !important;
+    color: #303134 !important;
+    line-height: 50px !important;
+  }
+  .select2-selection {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .select2-selection__arrow {
+    width: 8px !important;
+    height: 50px !important;
+    right: 9px !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.623945 1.23204L3.62466 3.80351C3.92999 4.06517 4.40967 4.06517 4.715 3.80351L7.71571 1.23204C8.04432 0.950443 8.04387 0.477756 7.71601 0.196369C7.41068 -0.0652835 6.93071 -0.0655411 6.62538 0.196105L4.16976 2.30034L1.7076 0.190381C1.40503 -0.0602739 0.939587 -0.0602577 0.636973 0.190324M0.623945 1.23204C0.299668 0.944396 0.304543 0.465661 0.636973 0.190324Z' fill='%23303134'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .select2-selection__arrow {
+    b {
+      display: none;
+    }
+  }
+  .select2-container--default.select2-container--open .select2-selection__arrow {
+    transform: rotate(180deg);
+  }
+
+  .rating_list {
+    margin-top: 50px;
+
+    li {
+      padding: 30px 0;
+
+      &:nth-child(1) {
+        .place {
+          color: #d0973e;
+        }
+      }
+      &:nth-child(2) {
+        .place {
+          color: #909090;
+        }
+      }
+      &:nth-child(3) {
+        .place {
+          color: #bc6414;
+        }
+      }
+      &:nth-child(even) {
+        background: #f3f3f3;
+      }
+
+      .user_avatar {
+        aspect-ratio: 1;
+        background-color: #dadded;
+        border-radius: 50%;
+        object-fit: contain;
+        object-position: bottom;
+        padding-top: 10px;
+        margin: -1px 20px 0;
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        min-height: 120px;
+
+        @media screen and (max-width: $sm){
+          margin-left: 0;
+          width: 100px;
+          height: 100px;
+          min-width: 100px;
+          min-height: 100px;
+
+        }
+      }
+
+      .place {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      .info {
+        width: 230px;
+        max-width: 230px;
+        padding-right: 10px;
+
+        .name {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: #303134;
+          margin-bottom: 5px;
+        }
+        .curl {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 17px;
+          color: #27348a;
+          margin-bottom: 20px;
+          display: block;
+        }
+        .scores {
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 20px;
+          color: #d8382c;
+        }
+      }
+    }
+  }
+  .achievements {
+    & > span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #7e8190;
+    }
+    .medal_wrapper {
+      margin-top: 20px;
+
+      .medal_wrapper_item {
+        position: relative;
+
+        &:last-child {
+          .medal_tooltip {
+            @media screen and (max-width: 1359px) {
+              top: 71% !important;
+              right: 77% !important;
+              left: unset !important;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -11px !important;
+                left: unset !important;
+                border-width: 8.5px 0 8.5px 14.7px;
+                border-color: transparent transparent transparent #fff;
+              }
+            }
+          }
+        }
+        &:nth-last-child(-n+2) {
+          .medal_tooltip {
+            @media screen and (max-width: 1280px) {
+              top: 71% !important;
+              right: 77% !important;
+              left: unset !important;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -11px !important;
+                left: unset !important;
+                border-width: 8.5px 0 8.5px 14.7px;
+                border-color: transparent transparent transparent #fff;
+              }
+            }
+          }
+        }
+
+        & img {
+          width: 90px;
+          height: 90px;
+          min-width: 90px;
+          min-height: 90px;
+
+          @media screen and (max-width: $xl) {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+          }
+
+          &:hover + .medal_tooltip {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+        .medal_tooltip {
+          z-index: 1;
+          position: absolute;
+          top: 71%;
+          left: 77%;
+          padding: 15px;
+          background-color: #fff;
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+          border-radius: 3px;
+          width: 240px;
+          visibility: hidden;
+          opacity: 0;
+          transition: all 0.25s ease-in-out;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -11px;
+            top: -1px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8.5px 14.7px 8.5px 0;
+            border-color: transparent #fff transparent transparent;
+            border-radius: 5px;
+          }
+
+          .title {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #303134;
+          }
+          .text {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 145%;
+            color: rgba(48, 49, 52, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
