@@ -1,0 +1,42 @@
+table.table_coral {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  border-collapse: collapse;
+  text-align: left;
+  color: white;
+  table-layout: auto !important;
+
+  @media screen and (max-width: $sm){
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+  width: auto !important;
+
+  }
+
+  th {
+    background: #c0595c;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  td {
+    background: #ed6c71;
+    padding: 5px 15px;
+
+    @media screen and (max-width: $sm){
+      padding: 5px;
+    }
+  }
+
+  td:nth-child(2) {
+    text-align: center;
+    padding: 5px;
+    width: min-content!important;
+  }
+}
