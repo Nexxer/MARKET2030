@@ -198,6 +198,21 @@
           color: $t-white;
         }
       }
+
+      &.coral {
+        color: #ed6c71;
+        border-color: #ed6c71;
+
+        a {
+          color: #ed6c71;
+        }
+        &:hover {
+          background-color: #ed6c71;
+          a {
+            color: $t-white;
+          }
+        }
+      }
     }
   }
 
@@ -401,7 +416,7 @@
       .read_more {
         margin-bottom: 1rem;
         transition: height 200ms ease;
-        height: auto!important;
+        height: auto !important;
 
         &.clamp {
           display: -webkit-box;

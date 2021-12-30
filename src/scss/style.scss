@@ -68,7 +68,6 @@ a:hover {
   }
 }
 
-
 @import "fonts";
 @import "v";
 @import "header";
@@ -80,13 +79,13 @@ a:hover {
 @import "about";
 @import "regulations";
 @import "footer";
+@import "modal";
 
 .select2-container--default
-.select2-results__option--highlighted.select2-results__option--selectable {
-background-color: $blue;
-color: white;
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: $blue;
+  color: white;
 }
-
 
 .border-market {
   border: 1px solid $blue;

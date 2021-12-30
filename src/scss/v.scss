@@ -12,8 +12,60 @@ $t-light-gray: #bdbdbd;
 $t-white: #fff;
 
 // MAIN COLOR
-$orange: #ED6C71;
-$blue: #27348B;
-$blue-light: #6871AE;
+$orange: #ed6c71;
+$blue: #27348b;
+$blue-light: #6871ae;
 
 $br-tl-br: 10px 0;
+
+// BOOTSTRAP CUSTOM BUTTONS
+.btn-close:focus {
+  box-shadow: none;
+}
+// CORAL
+.btn-coral {
+  color: #ffffff;
+  background-color: #ed6c71;
+  border-color: #ed6c71;
+}
+
+.btn-coral:hover,
+.btn-coral:focus,
+.btn-coral:active,
+.btn-coral.active,
+.open .dropdown-toggle.btn-coral {
+  color: #ffffff;
+  background-color: rgba(237, 110, 114, 0.8);
+  border-color: #ed6c71;
+}
+
+.btn-coral:active,
+.btn-coral.active,
+.open .dropdown-toggle.btn-coral {
+  background-image: none;
+}
+
+.btn-coral.disabled,
+.btn-coral[disabled],
+fieldset[disabled] .btn-coral,
+.btn-coral.disabled:hover,
+.btn-coral[disabled]:hover,
+fieldset[disabled] .btn-coral:hover,
+.btn-coral.disabled:focus,
+.btn-coral[disabled]:focus,
+fieldset[disabled] .btn-coral:focus,
+.btn-coral.disabled:active,
+.btn-coral[disabled]:active,
+fieldset[disabled] .btn-coral:active,
+.btn-coral.disabled.active,
+.btn-coral[disabled].active,
+fieldset[disabled] .btn-coral.active {
+  background-color: #ed6c71;
+  border-color: #ed6c71;
+}
+
+.btn-coral .badge {
+  color: #ed6c71;
+  background-color: #ffffff;
+}
+// END CORAL

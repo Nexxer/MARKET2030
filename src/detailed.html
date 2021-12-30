@@ -61,6 +61,7 @@
           <h2>Кружка белая, с надписью «Сегодня твой день!»</h2>
           <ul class="categories list-unstyled d-flex flex-wrap">
             <li><a href="#">Сувениры</a></li>
+            <li class="coral"><a href="#">Доступен в сургуте</a></li>
           </ul>
 
           <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
@@ -112,7 +113,7 @@
             <input type="text" class="form-control" placeholder="Введите промокод" aria-label="Введите промокод" aria-describedby="button-addon2">
             <button class="btn btn-outline-dark" type="button" id="button-addon2">Применить</button>
           </div>
-          <button class="btn-m add_basket">Добавить в корзину</button>
+          <button class="btn-m add_basket" type="button" data-bs-toggle="modal" data-bs-target="#addBasketModal">Добавить в корзину</button>
         </div>
 
         <div class="about_text col-lg-7">
@@ -343,6 +344,7 @@
   </main>
   @@include("_feedback.html")
   @@include("_footer.html")
+  @@include("_modal-basket.html")
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
