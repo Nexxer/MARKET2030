@@ -254,5 +254,26 @@ $(document).ready(function () {
       }
     }, 0);
   }
+
+  $("#form-search").on('click', function (e) {
+    e.stopPropagation();
+  })
+
+  // Открытие формы поиска
+  $("#search-wrapper").on('click', function () {
+    $(this).toggleClass('search p-0');
+    $('#form-search').toggleClass('show');
+    $(this).children('span').toggleClass('d-lg-block');
+    $(this).find('.input-group-prepend').toggleClass('d-none');
+    $(this).find('.input-group-append').toggleClass('d-none');
+  })
+  // Закрытие формы поиска
+  $("#search-close").on('click', function () {
+    $("#search-wrapper").toggleClass('search p-0');
+    $('#form-search').toggleClass('show');
+    $("#search-wrapper").children('span').toggleClass('d-lg-block');
+    $("#search-wrapper").find('.input-group-prepend').toggleClass('d-none');
+    $("#search-wrapper").find('.input-group-append').toggleClass('d-none');
+  })
 })
 

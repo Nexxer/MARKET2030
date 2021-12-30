@@ -86,3 +86,14 @@ a:hover {
 background-color: $blue;
 color: white;
 }
+
+
+.border-market {
+  border: 1px solid $blue;
+}
+
+.btn-outline-market:hover {
+  background-color: $blue;
+  color: $t-white;
+  border-radius: 0;
+}
