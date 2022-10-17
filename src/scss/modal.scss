@@ -1,3 +1,6 @@
+.modal {
+  background-color: rgba(#000000, 0.2);
+}
 #addBasketModal {
   .modal-content {
     box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);
@@ -26,17 +29,33 @@
       float: right;
       padding-left: 2px;
       cursor: pointer;
-      color: #ffb300;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("./../img/icons/star-gray.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-right: 6px;
 
       &:last-child {
         padding-left: 0;
       }
+    }
 
-      &:hover:before,
-      &:hover ~ .star-rating__ico:before,
-      &__input:checked ~ .star-rating__ico:before {
-        content: "\f005";
-      }
+    &__ico:hover:before,
+    &__ico:hover ~ .star-rating__ico:before,
+    &__input:checked ~ .star-rating__ico:before {
+      content: "";
+      float: right;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      padding-left: 2px;
+      background-image: url("./../img/icons/star-orange.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
 
     &__input {

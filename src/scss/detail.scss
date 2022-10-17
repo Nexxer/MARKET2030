@@ -569,6 +569,10 @@
 
     .customer_reviews_item {
       margin-bottom: 50px;
+      
+      &:not(:last-of-type){
+        border-bottom: 1px solid #d1d1d1;
+      }
 
       .head {
         img {
@@ -623,6 +627,7 @@
 
       .data {
         margin-left: 110px;
+        margin-bottom: 50px;
 
         @media screen and (max-width: $md) {
           margin-left: 0;
@@ -642,6 +647,13 @@
           &:hover {
             color: #aaaaaa;
           }
+        }
+      }
+      
+      .data-reply {
+        margin: 0px 0 30px 140px;
+        @media screen and (max-width: $md){
+            margin-left: 40px;
         }
       }
     }
