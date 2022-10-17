@@ -3,3 +3,44 @@
     box-shadow: 0px 5px 20px rgb(0 0 0 / 15%);
   }
 }
+
+#addCommentModal {
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .star-rating {
+    font-size: 0;
+
+    &__wrap {
+      display: inline-block;
+      font-size: 1rem;
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+    &__ico {
+      float: right;
+      padding-left: 2px;
+      cursor: pointer;
+      color: #ffb300;
+
+      &:last-child {
+        padding-left: 0;
+      }
+
+      &:hover:before,
+      &:hover ~ .star-rating__ico:before,
+      &__input:checked ~ .star-rating__ico:before {
+        content: "\f005";
+      }
+    }
+
+    &__input {
+      display: none;
+    }
+  }
+}

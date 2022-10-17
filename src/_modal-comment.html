@@ -1,0 +1,43 @@
+<div class="modal fade" data-bs-backdrop="false" id="addCommentModal" tabindex="-1" aria-labelledby="addCommentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal_form">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-0">
+                <h5 class="modal-title text-center" id="addCommentModalLabel">Оставьте отзыв</h5>
+
+                <form>
+                    <div class="form-group">
+                        <label>Оцените товар</label>
+                        <div class="star-rating">
+                            <div class="star-rating__wrap">
+                                <input class="star-rating__input" id="star-5" type="radio" name="rating" value="5">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-5" title="Отлично"></label>
+                                <input class="star-rating__input" id="star-4" type="radio" name="rating" value="4">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-4" title="Хорошо"></label>
+                                <input class="star-rating__input" id="star-3" type="radio" name="rating" value="3">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-3" title="Удовлетворительно"></label>
+                                <input class="star-rating__input" id="star-2" type="radio" name="rating" value="2">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-2" title="Плохо"></label>
+                                <input class="star-rating__input" id="star-1" type="radio" name="rating" value="1">
+                                <label class="star-rating__ico fa fa-star-o fa-lg" for="star-1" title="Ужасно"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш отзыв о товаре</label>
+                        <textarea class="form-control" rows="5" placeholder="Поделитесь своими впечатлениями"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Загрузите фото</label>
+                        <input type="file" name="" id="" accept=".jpg, .jpeg, .png, .webp" multiple>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn btn-coral">Оставить отзыв</button>
+            </div>
+        </div>
+    </div>
+</div>
