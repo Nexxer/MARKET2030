@@ -203,7 +203,23 @@ $(document).ready(function () {
       minimumResultsForSearch: -1,
       width: '300px',
     });
-  }
+    }
+    
+    if ($('#deliveryMethod').length > 0) {
+        $('#deliveryMethod').select2({
+            minimumResultsForSearch: -1,
+            width: '100%',
+        });
+
+        $('#deliveryMethod').on('change', function (e) {
+            const val = $(e.currentTarget).val();
+            if (val == 1) {
+                $('.modal-post-info').slideDown()
+            } else {
+                $('.modal-post-info').slideUp();
+            }
+        })
+    }
 
   if ($('#sortCategories').length > 0) {
     $('#sortCategories').select2({

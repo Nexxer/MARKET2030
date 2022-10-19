@@ -1,0 +1,55 @@
+<div class="modal fade" data-bs-backdrop="false" id="orderItem" tabindex="-1" aria-labelledby="orderItemLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal_form">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-0">
+                <form>
+                    <label for="deliveryMethod" class="text-left">Выберите тип доставки</label>
+                    <div class="form-group filter_sort">
+                        <select class="form-select w-auto" id="deliveryMethod">
+                            <option disabled selected></option>
+                            <option value="1">Почта</option>
+                            <option value="2">Голуби</option>
+                            <option value="3">Телепорт</option>
+                        </select>
+                    </div>
+                    <div class="modal-post-info">
+                        <div class="form-group mt-3">
+                            <label for="name" class="text-left">Введите ФИО</label>
+                            <input type="text" class="form-control" id="name" placeholder="Иванов Иван Иванович">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="telephone" class="text-left">Введите телефон</label>
+                            <input type="tel" class="form-control" id="telephone" placeholder="+7-999-999-99-99">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="adress" class="text-left">Введите адресс</label>
+                            <input type="text" class="form-control" id="adress" placeholder="name@example.com">
+                        </div>
+                    </div>
+                </form>
+                <p class="text-center mt-5 detail-point">Требуется баллов: <span>1234</span></p>
+            </div>
+            <div class="modal-footer border-0 pt-0 mt-3">
+                <button type="submit" class="btn btn-coral" data-bs-toggle="modal" data-bs-target="#orderConfirm">Заказать</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-bs-backdrop="false" id="orderConfirm" tabindex="-1" aria-labelledby="orderConfirmLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal_form">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-0">
+                <h5 class="modal-title text-center">Ваш заказ №123456789</h5>
+                <h5 class="modal-title text-center">Спасибо за заказ</h5>
+            </div>
+            <div class="modal-footer border-0 pt-0 mt-3"></div>
+        </div>
+    </div>
+</div>
