@@ -151,19 +151,139 @@
       }
     }
   }
-  
+
   .modal-post-info {
     display: none;
   }
-  
+
   .detail-point {
-     span {
-        color: #ed6c71;
-        font-weight: bold;
-        font-size: 1.2rem;
-     }
+    span {
+      color: #ed6c71;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
   }
 }
 .select2-container--open {
   z-index: 1060;
+}
+
+.elk-modal {
+  .modal-content {
+    border-radius: 15px 0px;
+    background: #f4f5fb url(/local/components/elk/auth.modal/templates/auth.modal/img/modal-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 25px solid #fff;
+
+    @media screen and (max-width: 576px) {
+      border: 10px solid #fff;
+    }
+  }
+
+  .modal-header {
+    border: none;
+    padding: 25px 50px;
+    padding-bottom: 0px;
+
+    @media screen and (max-width: 576px) {
+      padding: 15px;
+    }
+
+    .close {
+      font-size: 2rem;
+      padding: 1rem 1rem;
+      margin: -1rem -1rem -1rem auto;
+    }
+  }
+
+  .modal-body {
+    padding: 25px 50px;
+
+    @media screen and (max-width: 576px) {
+      padding: 15px;
+    }
+  }
+
+  span.red {
+    color: #f00;
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form input[type="text"],
+  .form input[type="file"],
+  .form input[type="password"],
+  .form select,
+  .form textarea {
+    background: #ffffff;
+    border: 1px solid #d3d5df;
+    border-radius: 2px;
+    outline: none !important;
+    padding: 10px 10px;
+    font-size: 0.875rem;
+    width: 100%;
+    transition: all 0.7s ease;
+  }
+
+  .btn-m .spinner,
+  .btn-o .spinner {
+    display: none;
+  }
+
+  .text-12 {
+    font-size: 0.75rem;
+
+    a {
+      color: #27348b;
+      text-decoration: none;
+      text-transform: none;
+      font-size: inherit;
+
+      &:hover {
+        color: #aaaaaa;
+      }
+    }
+  }
+}
+
+.btn-m {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    left: -12px;
+    top: 0px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    right: -12px;
+    top: 0px;
+  }
+
+  &.btn-40 {
+    height: 40px;
+    line-height: 40px;
+
+    &::before {
+      height: 40px;
+      background: url(../img/btn-m-40-l-red.png);
+    }
+    &::after {
+      height: 40px;
+      background: url(../img/btn-m-40-r-red.png);
+    }
+  }
 }
